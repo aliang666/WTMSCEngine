@@ -12,7 +12,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.requires_arc = true
 
+  s.vendored_frameworks ="**/*.framework"
+
   s.source       = { :git => "https://github.com/aliang666/WTMSCEngine.git", :tag => "#{s.version}" }
-  s.source_files  = "WTMSCEngine/*.{h,m,framework}"
+  s.source_files  = "WTMSCEngine/*.{h,m}"
 
 end
