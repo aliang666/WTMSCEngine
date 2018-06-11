@@ -13,6 +13,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.vendored_frameworks ="**/*.framework"
+  s.frameworks = 'AVFoundation','SystemConfiguration','Foundation','CoreTelephony','AudioToolbox','UIKit','CoreLocation','Contacts','AddressBook','QuartzCore','CoreGraphics'
+  s.library = 'z','c++','icucore'
 
   s.source       = { :git => "https://github.com/aliang666/WTMSCEngine.git", :tag => "#{s.version}" }
   s.source_files  = "WTMSCEngine/*.{h,m}"
