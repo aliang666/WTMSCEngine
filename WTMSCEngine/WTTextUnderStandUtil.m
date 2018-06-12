@@ -54,12 +54,12 @@
 - (void)textUnderStandCnUs:(NSString *)orgText isChinese:(BOOL)isChinese success:(void (^)(NSString *result))success  fail:(void (^)(WTTextUnderStandErrorType errorType))fail {
      [self configueCnUSIFlyTextUnderstander:isChinese];
      [self.iFlyUnderStand understandText:orgText withCompletionHandler:^(NSString *result, IFlySpeechError *error) {
-          NSDictionary *ddd = [WTBaseIFlytek dictionaryWithJsonString:result];
+          NSDictionary *ddd = [WTBaseMSCEngine dictionaryWithJsonString:result];
           NSArray *ar = ddd[@"results"];
           if (ar && [ar isKindOfClass:[NSArray class]] && ar.count>0) {
                NSDictionary *dic = ar[0];
 //               NSString *orgResult = [WTTextUnderStandUtil relayString:dic[@"original"]];
-               NSString *destResult = [WTBaseIFlytek relayString:dic[@"translated"]];
+               NSString *destResult = [WTBaseMSCEngine relayString:dic[@"translated"]];
                success(destResult);
           } else {
                fail (WTTextUnderStandErrorTypeCloudError);

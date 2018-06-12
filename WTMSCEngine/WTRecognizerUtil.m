@@ -121,10 +121,10 @@
         [result appendFormat:@"%@",key];
     }
     NSString *resultString = [NSString stringWithFormat:@"%@",result];
-    NSDictionary *ddd = [WTBaseIFlytek dictionaryWithJsonString:resultString];
+    NSDictionary *ddd = [WTBaseMSCEngine dictionaryWithJsonString:resultString];
     if (ddd[@"trans_result"]) {
-        NSString *src = [WTBaseIFlytek relayString:ddd[@"trans_result"][@"src"]];
-        NSString *dst = [WTBaseIFlytek relayString:ddd[@"trans_result"][@"dst"]];
+        NSString *src = [WTBaseMSCEngine relayString:ddd[@"trans_result"][@"src"]];
+        NSString *dst = [WTBaseMSCEngine relayString:ddd[@"trans_result"][@"dst"]];
         if (src.length>0 && dst.length>0) {
             if (self.recognizerSuccess) {
                 self.recognizerSuccess(src, dst);

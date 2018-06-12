@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WTBaseIFlytek.h"
+#import "WTBaseMSCEngine.h"
 #import "IFlyMSC/IFlyMSC.h"
-#import "WTIFlyEnum.h"
-@interface WTRecognizerUtil : WTBaseIFlytek
+#import "WTMSCEnum.h"
+@interface WTRecognizerUtil : WTBaseMSCEngine
 /**
  * 单例对象
  */

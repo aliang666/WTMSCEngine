@@ -7,15 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WTIFlyEnum.h"
-#import "WTBaseIFlytek.h"
+#import "WTMSCEnum.h"
+#import "WTBaseMSCEngine.h"
 
 typedef NS_ENUM(NSInteger, WTTextUnderStandErrorType) {
      WTTextUnderStandErrorTypeNetError     = 0,//无网络
      WTTextUnderStandErrorTypeCloudError = 1, //云端无法识别
 };
 
-@interface WTTextUnderStandUtil : WTBaseIFlytek
+@interface WTTextUnderStandUtil : WTBaseMSCEngine
 /**
  * 单例对象
  */

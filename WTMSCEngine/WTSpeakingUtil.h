@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WTIFlyEnum.h"
-#import "WTBaseIFlytek.h"
+#import "WTMSCEnum.h"
+#import "WTBaseMSCEngine.h"
 
-@interface WTSpeakingUtil : WTBaseIFlytek
+@interface WTSpeakingUtil : WTBaseMSCEngine
 /**
  * 单例对象
  */
